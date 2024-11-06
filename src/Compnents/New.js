@@ -9,19 +9,6 @@ export default class New extends Component {
       data: myData
     }
   }
-  // renderItem() {
-  //   const one = JSON.parse(this.state.data)
-  //   console.log("OO", one)
-  //   const two = one.results.map((item, index) => {
-  
-        
-      
-    
-  //     return (<div className='newItemColumn'><NewsItem key={index}title={item.title} index={index}/></div>) 
-  //   })
-  //   return two
-  // }
-
   render() {
     console.log("DATa", myData)
     return (
@@ -55,8 +42,8 @@ export default class New extends Component {
         {this.state.data.results.map((item,index)=>{
          return(
            
-            <div className='newItemColumn'>
-            <NewsItem index={index} title={item.title} 
+            <div className='newItemColumn' key={index}>
+            <NewsItem  title={item.title} 
             linkData={item.link} description={item.description}
             image_url={item.image_url}/>
             </div>

@@ -30,7 +30,7 @@ export default class NewsItem extends Component {
   render() {
     return (
    
-        <div className="card card1" key={this.props.index}>
+        <div className="card card1">
           <img src={this.props.image_url} className="card-img-top image1" alt="Loading ..."/>
             <div className="card-body">
               <h5 className="card-title">{this.props.title}</h5>
